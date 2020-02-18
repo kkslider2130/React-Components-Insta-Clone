@@ -1,5 +1,5 @@
 //Complete the necessary code in this file
-import React from "react";
+import React, { useState } from "react";
 import Post from "./Post";
 import "./Posts.css";
 
@@ -15,20 +15,33 @@ function makeNote(obj) {
     />
   );
 }
+
 // pass the data from App.js down as props then map through the data
 const PostsPage = props => {
-  return (
-    <div className="posts-container-wrapper">
-      {/* map through data here */}
-      {props.data.map(makeNote)}
+  let filteredArray = props.data.filter(a =>
+    a.username.includes(props.searchName)
+  );
+  console.log(filteredArray);
+  if (filteredArray.length > 0) {
+    return (
+      <div className="posts-container-wrapper">
+        {filteredArray.map(makeNote)}
+      </div>
+    );
+  } else {
+    return (
+      <div className="posts-container-wrapper">
+        {/* map through data here */}
+        {props.data.map(makeNote)}
 
-      {/* test <Post
+        {/* test <Post
         username={props.data[0].username}
         thumbnailUrl={props.data[1].thumbnailUrl}
         imageUrl={props.data[0].imageUrl}
       /> */}
-    </div>
-  );
+      </div>
+    );
+  }
 };
 
 export default PostsPage;

@@ -14,13 +14,21 @@ import "./App.css";
 // import dummydata
 
 const App = () => {
+  const [searchName, setSearchName] = useState();
+
+  const handleChange = event => {
+    console.log(event.target.value);
+    setSearchName(event.target.value);
+  };
+
   // set up state for the dummy data and pass to your PostsPage
   const [data] = useState(dummyData);
   return (
     <div className="App">
       {/* Add components here  and pass props where appropriate */}
-      <SearchBar />
-      <PostPage data={data} />
+      <SearchBar function={handleChange} />
+
+      <PostPage data={data} searchName={searchName} />
     </div>
   );
 };

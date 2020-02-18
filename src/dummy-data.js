@@ -51,6 +51,34 @@ const dummyData = [
     ]
   },
   {
+    username: "blazeit420",
+    thumbnailUrl:
+      "https://p7.hiclipart.com/preview/191/478/341/social-media-facebook-emoji-icon-instagram-png-icon-thumbnail.jpg",
+    imageUrl:
+      "https://images.unsplash.com/photo-1518465444133-93542d08fdd9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+    likes: 6,
+    timestamp: "July 17th 2017, 12:42:40 pm",
+    comments: [
+      {
+        username: "blazeit420",
+        text: "Gon smoke dis sikkkk nug I scored with da boyss"
+      },
+
+      {
+        username: "myBoss",
+        text: "Sure you should be posting this on instantGram?"
+      },
+      {
+        username: "mom",
+        text: "Joseph call me ASAP!!!"
+      },
+      {
+        username: "broseph",
+        text: "you're an idiot"
+      }
+    ]
+  },
+  {
     username: "jayjayslider2130",
     thumbnailUrl:
       "https://p7.hiclipart.com/preview/191/478/341/social-media-facebook-emoji-icon-instagram-png-icon-thumbnail.jpg",
@@ -61,7 +89,7 @@ const dummyData = [
     comments: [
       {
         username: "brz",
-        text: "yoyoyo shit dawg"
+        text: "looking good jay"
       },
       {
         username: "plio",

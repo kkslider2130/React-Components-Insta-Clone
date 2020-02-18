@@ -3,11 +3,21 @@
 import React from "react";
 
 const LikeSection = props => {
+  console.log(props.clicked);
+  let styleColor = "";
+  if (props.clicked === true) {
+    styleColor = "red";
+  }
+
   return (
     <div>
       <div className="like-section" key="likes-icons-container">
         <div className="like-section-wrapper">
-          <i onClick={props.plusLike} className="far fa-heart heart" />
+          <i
+            style={{ color: styleColor }}
+            onClick={props.plusLike}
+            className="far fa-heart heart"
+          />
         </div>
         <div className="like-section-wrapper">
           <i className="far fa-comment" />

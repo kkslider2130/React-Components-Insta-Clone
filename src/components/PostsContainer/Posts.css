@@ -56,6 +56,6 @@
   font-weight: 600;
 }
 .heart:hover {
-  color: red;
   cursor: pointer;
+  color: red;
 }

@@ -11,8 +11,16 @@ const Post = props => {
   console.log(props.data.likes);
   // set up state for the likes
   let [like, setlikes] = useState(props.data.likes);
+  const [clicked, setCliked] = useState(false);
+
   const plusLike = () => {
-    setlikes(like => like + 1);
+    setCliked(true);
+    if (clicked === false) {
+      setlikes(like => like + 1);
+    } else if (clicked === true) {
+      setlikes(like => like - 1);
+      setCliked(false);
+    }
   };
 
   return (
@@ -21,7 +29,7 @@ const Post = props => {
       <div className="post-image-wrapper">
         <img alt="post thumbnail" className="post-image" src={props.imageUrl} />
       </div>
-      <LikeSection plusLike={plusLike} likes={like} />
+      <LikeSection plusLike={plusLike} likes={like} clicked={clicked} />
       <CommentSection postId={props.imageUrl} comments={props.comments} />
     </div>
   );
