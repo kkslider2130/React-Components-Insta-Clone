@@ -1,18 +1,16 @@
 // You do not need to change any code in this file
-import React from "react";
+import React, { useState } from "react";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
         <i className="fab fa-instagram" />
       </div>
+      <h1>Instantgram</h1>
       <form className="search-form">
-        <input
-          type="text"
-          placeholder="Search"
-        />
+        <input type="text" placeholder="Search" onChange={props.function} />
       </form>
       <div className="social-wrapper">
         <div className="social">
